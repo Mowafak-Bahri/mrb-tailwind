@@ -1,0 +1,31 @@
+{
+  "name": "mrb-tailwind-html",
+  "homepage": "",
+  "version": "0.0.1",
+  "description": "mrb-tailwind-html is a components library for Tailwind CSS.",
+  "repository": "https://github.com/Mowafak-Bahri/mrb-tailwind",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "copy": "cp -r ./mrb-theme ./dist/mrb-theme && cp package.json ./dist && cp ./README.md ./dist",
+    "compile:ripple": "swc ./node_modules/material-ripple-effects/ripple.js -o ./dist/scripts/ripple.js --config-file .swcrc",
+    "build:cjs": "swc ./scripts -d ./dist/scripts --config-file .swcrc",
+    "build:css": "npx tailwindcss -i ./style.css -o ./dist/mrb-tailwind.css -m",
+    "build": "pnpm build:cjs && pnpm compile:ripple && pnpm build:css && pnpm copy"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "material-ripple-effects": "^2.0.1"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.198",
+    "@tailwindcss/forms": "^0.5.1",
+    "autoprefixer": "10.4.2",
+    "postcss": "8.4.8",
+    "tailwindcss": "3.0.23"
+  }
+}
