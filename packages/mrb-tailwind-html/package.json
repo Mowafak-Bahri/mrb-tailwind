@@ -2,11 +2,12 @@
   "name": "mrb-tailwind-html",
   "homepage": "",
   "version": "0.0.1",
-  "description": "mrb-tailwind-html is a components library for Tailwind CSS.",
+  "description": "mrb-tailwind-html is a UI kit for Tailwind CSS.",
   "repository": "https://github.com/Mowafak-Bahri/mrb-tailwind",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {
