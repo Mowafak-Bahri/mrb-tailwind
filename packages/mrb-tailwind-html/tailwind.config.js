@@ -1,4 +1,4 @@
-const mrbConfig = require("./mrb-theme/mrb-config");
+const mrbConfig = require("./src/mrb-config");
 
 module.exports = mrbConfig({
   content: [],
